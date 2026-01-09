@@ -1,0 +1,29 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ef4444;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+  
+  <!-- Large Waveform Icon -->
+  <rect x="200" y="215" width="40" height="200" fill="white" rx="20" opacity="0.3"/>
+  <rect x="260" y="165" width="40" height="300" fill="white" rx="20" opacity="0.5"/>
+  <rect x="320" y="115" width="40" height="400" fill="white" rx="20" opacity="0.7"/>
+  <rect x="380" y="180" width="40" height="270" fill="white" rx="20" opacity="0.5"/>
+  <rect x="440" y="65" width="40" height="500" fill="url(#accentGrad)" rx="20"/>
+  <rect x="500" y="165" width="40" height="300" fill="white" rx="20" opacity="0.5"/>
+  <rect x="560" y="215" width="40" height="200" fill="white" rx="20" opacity="0.3"/>
+  
+  <!-- Text -->
+  <text x="650" y="300" font-family="Arial, sans-serif" font-size="80" font-weight="bold" fill="white">PodcastPro</text>
+  <text x="650" y="380" font-family="Arial, sans-serif" font-size="60" font-weight="300" fill="white">AI</text>
+  <text x="650" y="450" font-family="Arial, sans-serif" font-size="32" font-weight="400" fill="white" opacity="0.9">Automated Podcast Video Production</text>
+</svg>
