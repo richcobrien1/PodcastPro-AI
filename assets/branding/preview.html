@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PodcastProAI Logo Preview</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            padding: 40px;
+            background: #f0f0f0;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #1a1a2e;
+        }
+        
+        .logo-section {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .logo-section h2 {
+            margin-bottom: 20px;
+            color: #333;
+            font-size: 1.5em;
+        }
+        
+        .logo-display {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px;
+            border-radius: 8px;
+            min-height: 200px;
+        }
+        
+        .light-bg {
+            background: white;
+            border: 2px solid #e0e0e0;
+        }
+        
+        .dark-bg {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .logo-display img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .info {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 6px;
+            font-size: 0.95em;
+            color: #666;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .icon-preview {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+        }
+        
+        .icon-preview img {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>PodcastProAI Logo Preview</h1>
+        
+        <div class="grid">
+            <div class="logo-section">
+                <h2>Logo - Light Background</h2>
+                <div class="logo-display light-bg">
+                    <img src="logo-light-bg.svg" alt="PodcastProAI Logo for Light Backgrounds">
+                </div>
+                <div class="info">
+                    <strong>File:</strong> logo-light-bg.svg<br>
+                    <strong>Use on:</strong> White/light backgrounds, website headers, light mode UI<br>
+                    <strong>Colors:</strong> Purple-blue gradient bars + dark text
+                </div>
+            </div>
+            
+            <div class="logo-section">
+                <h2>Logo - Dark Background</h2>
+                <div class="logo-display dark-bg">
+                    <img src="logo-dark-bg.svg" alt="PodcastProAI Logo for Dark Backgrounds">
+                </div>
+                <div class="info">
+                    <strong>File:</strong> logo-dark-bg.svg<br>
+                    <strong>Use on:</strong> Dark backgrounds, dark mode UI, presentations<br>
+                    <strong>Colors:</strong> White bars + white text + orange-red accent
+                </div>
+            </div>
+        </div>
+        
+        <div class="logo-section">
+            <h2>Logo - Gradient Background</h2>
+            <div class="logo-display gradient-bg">
+                <img src="logo-dark-bg.svg" alt="PodcastProAI Logo on Gradient">
+            </div>
+            <div class="info">
+                <strong>Use on:</strong> Brand gradient backgrounds, hero sections, promotional materials<br>
+                <strong>Recommendation:</strong> Use dark version (white text) on gradient backgrounds
+            </div>
+        </div>
+        
+        <div class="logo-section">
+            <h2>Icons & Favicons</h2>
+            <div class="icon-preview light-bg">
+                <div>
+                    <img src="logo-icon.svg" alt="App Icon">
+                    <p style="text-align: center; margin-top: 10px; color: #666;">App Icon</p>
+                </div>
+                <div>
+                    <img src="favicon.svg" alt="Favicon" style="width: 64px; height: 64px;">
+                    <p style="text-align: center; margin-top: 10px; color: #666;">Favicon (32x32)</p>
+                </div>
+            </div>
+            <div class="info">
+                <strong>App Icon:</strong> logo-icon.svg (100x100, gradient background)<br>
+                <strong>Favicon:</strong> favicon.svg (32x32, simplified waveform)<br>
+                <strong>Use:</strong> Browser tabs, PWA icons, app stores
+            </div>
+        </div>
+        
+        <div class="logo-section">
+            <h2>Social Media Preview</h2>
+            <div class="logo-display" style="padding: 0;">
+                <img src="logo-social.svg" alt="Social Media Preview" style="width: 100%; border-radius: 8px;">
+            </div>
+            <div class="info">
+                <strong>File:</strong> logo-social.svg (1200x630)<br>
+                <strong>Use:</strong> Open Graph images, Twitter cards, LinkedIn previews<br>
+                <strong>Format:</strong> Gradient background with large waveform and text
+            </div>
+        </div>
+    </div>
+</body>
+</html>
