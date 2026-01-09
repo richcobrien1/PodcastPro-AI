@@ -1,0 +1,20 @@
+{
+  "name": "v2u-automation-scripts",
+  "version": "1.0.0",
+  "description": "Automated episode generation for v2u.us",
+  "scripts": {
+    "generate-episode": "ts-node generate-episode.ts",
+    "test-pipeline": "ts-node generate-episode.ts --test"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.637.0",
+    "@aws-sdk/s3-request-presigner": "^3.637.0",
+    "dotenv": "^16.4.5",
+    "form-data": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
