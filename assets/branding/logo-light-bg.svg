@@ -10,7 +10,7 @@
     </linearGradient>
   </defs>
   
-  <!-- Waveform Bars -->
+  <!-- Waveform Bars - Gradient colors for light backgrounds -->
   <rect x="10" y="40" width="4" height="20" fill="url(#primaryGrad)" rx="2"/>
   <rect x="18" y="30" width="4" height="40" fill="url(#primaryGrad)" rx="2"/>
   <rect x="26" y="25" width="4" height="50" fill="url(#primaryGrad)" rx="2"/>
@@ -19,7 +19,7 @@
   <rect x="50" y="30" width="4" height="40" fill="url(#primaryGrad)" rx="2"/>
   <rect x="58" y="38" width="4" height="24" fill="url(#primaryGrad)" rx="2"/>
   
-  <!-- Text -->
+  <!-- Text - Dark for light backgrounds -->
   <text x="75" y="45" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="#1a1a2e">PodcastPro</text>
   <text x="75" y="70" font-family="Arial, sans-serif" font-size="22" font-weight="300" fill="url(#accentGrad)">AI</text>
 </svg>
