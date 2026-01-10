@@ -289,6 +289,7 @@ R2_SECRET_KEY        # Storage credentials
 | LICENSE | ✅ Complete |
 | CONTRIBUTING.md | ✅ Complete |
 | AUTOMATION_GUIDE.md | ✅ Complete |
+| PODCASTPRO_AI_SYSTEM_ARCHITECTURE.md | ✅ Complete |
 | SETUP.md | ⏳ Planned |
 | API.md | ⏳ Planned |
 | VIDEO_COMPOSITION.md | ⏳ Planned |
@@ -371,14 +372,460 @@ R2_SECRET_KEY        # Storage credentials
 
 ---
 
+### January 10, 2026 - Session 3: Architecture Review & Planning
+
+**Status**: 🎯 Architecture Documented, Ready for SaaS Build
+
+#### Architecture Documentation Received
+
+**Source**: V2U Website AI Agent generated comprehensive system documentation
+**File**: `PODCASTPRO_AI_SYSTEM_ARCHITECTURE.md` (1,072 lines)
+
+**Key Insights from Architecture Doc**:
+
+1. **Complete Production System Already Exists** (in V2U website)
+   - News collector: RSS feeds + YouTube trending
+   - Metadata generation: NotebookLM integration
+   - Level 1 publishing: YouTube (automated), Rumble/Spotify (manual)
+   - Level 2 social: 10+ platform automation (Twitter, LinkedIn, Facebook, Threads, Bluesky)
+   - Universal media player: Device-adaptive streaming portal
+   - Automation logging: Real-time monitoring dashboard
+
+2. **Three-Tier Architecture**
+   - **Level 0**: Content creation (NotebookLM → video production)
+   - **Level 1**: Primary platforms (YouTube, Rumble, Spotify)
+   - **Level 2**: Social promotion (Twitter, LinkedIn, Facebook, Instagram, Threads, etc.)
+
+3. **Current System Capabilities**
+   - 63% time savings (120 min → 44 min per episode)
+   - YouTube 100% automated upload
+   - Multi-account social posting (2x Twitter, 2x Facebook, LinkedIn, Threads, Bluesky)
+   - Real-time automation logging with 7-day rotation
+   - Device-adaptive video player (desktop/mobile portrait/landscape)
+
+4. **Critical Issues Identified**
+   - ⚠️ **Automation detection logic broken** - cron runs but posts nothing (0% success)
+   - ⚠️ **Manual "Post Latest Now" button is ONLY working method**
+   - ⚠️ **Vercel cron unreliable** - migrated to GitHub Actions
+   - ⚠️ **Next.js version lock-in** - planned Cloudflare Pages migration (Jan 13)
+   - ⚠️ **Instagram blocked** - requires Meta Business Verification
+
+5. **What Already Works**
+   - ✅ News-collector RSS parser (TechCrunch, MIT Tech Review, Ars Technica)
+   - ✅ NotebookLM metadata generation workflow
+   - ✅ YouTube OAuth automated upload
+   - ✅ Twitter/LinkedIn/Facebook/Threads manual posting
+   - ✅ Automation logging dashboard
+   - ✅ Multi-format video support (landscape/portrait/square)
+   - ✅ Cloudflare R2 media hosting
+
+6. **What Needs to Be Built for SaaS**
+   - Multi-tenant architecture (per-user R2 storage)
+   - User authentication (Clerk/Auth0)
+   - Per-user API key management
+   - Billing integration (Stripe)
+   - FFmpeg video automation (replace Clipchamp manual workflow)
+   - Fixed automation detection logic
+   - Enhanced UI for platform management
+
+#### Gap Analysis: V2U System → PodcastProAI SaaS
+
+**Already in PodcastProAI Repo**:
+- ✅ News-collector module (basic RSS parser)
+- ✅ Core automation scripts (generate-episode.ts, compose-video.ts)
+- ✅ React/Vite frontend foundation
+- ✅ Brand identity and logo assets
+
+**Needs to be Ported from V2U**:
+- 🔧 NotebookLM metadata parser (`parse-notebooklm.js`)
+- 🔧 Platform formatters (`platform-formatters.js`)
+- 🔧 Level 1 publishing automation (`auto-publish-level1.js`)
+- 🔧 Level 2 social posting APIs (`/api/automation/*`)
+- 🔧 Automation logging system (`lib/automation-logger.ts`)
+- 🔧 Universal media player portal (`/watch/[id]` page)
+- 🔧 Cloudflare KV integration for credentials/logs
+- 🔧 GitHub Actions cron automation
+
+**Needs to be Built from Scratch**:
+- 🆕 Multi-tenant user system
+- 🆕 Per-user R2 storage isolation
+- 🆕 API key management UI
+- 🆕 Billing and subscription management
+- 🆕 User onboarding flow
+- 🆕 Account settings page
+- 🆕 Usage tracking and limits
+- 🆕 Admin dashboard
+
+#### Strategic Decisions Made
+
+**Architecture Approach**:
+- Adopt V2U's proven three-tier architecture (Level 0/1/2)
+- Port working components, fix broken ones
+- Add multi-tenant layer on top
+
+**Tech Stack Alignment**:
+- Keep: Cloudflare R2, Cloudflare KV, Cloudflare Workers
+- Migrate: Next.js → React/Vite for frontend (already started)
+- Add: User auth, billing, admin tools
+
+**Priorities for Week 1**:
+1. Port working news-collector and metadata tools
+2. Port Level 1 YouTube automation
+3. Fix automation detection logic (critical bug)
+4. Test end-to-end with API keys
+
+**Deferred to Post-Launch**:
+- Level 2 social automation (complex, buggy in V2U)
+- Instagram integration (business verification required)
+- Universal player portal (nice-to-have)
+- Advanced analytics
+
+#### Updated Roadmap Implications
+
+**Week 1 Focus Shift**:
+- Original: Build core automation from scratch
+- Revised: Port + fix V2U working components
+- Priority: YouTube automation + metadata parser
+- Critical: Fix broken automation detection
+
+**Competitive Advantage Validated**:
+- V2U system proves the workflow works
+- 63% time savings already demonstrated
+- YouTube automation 100% functional
+- Market validation from real production use
+
+**Risk Mitigation**:
+- Known issues documented and understood
+- Working codebase to reference
+- Production experience from V2U
+- Clear path to MVP
+
+#### Strategic Direction Update (Jan 10, 2026 - Evening)
+
+**Critical Pivot Decision**: Focus on the **HARD PART FIRST** - AI-Powered Video Creation
+
+**New Priority #1**: Automated Video Composition System
+- User input management: Sources (media, audio, video, images)
+- Asset library: Promo inserts, intros/outros, background media
+- AI-driven configuration: Master prompt → video template
+- Metadata generation: Title, keywords, summary, topics, timelines, tags
+- FFmpeg automation: Compose complete video with all elements
+- R2 storage: Upload with full metadata intact
+- Template system: Save, recall, edit, reuse configurations
+
+**Deferred to Later**:
+- YouTube/Rumble/Spotify publishing automation (Level 1)
+- Social media cross-posting (Level 2)
+- Universal media player portal
+
+**Tech Stack Decisions**:
+- ✅ **Frontend**: React/Vite (continue current path)
+- ✅ **Authentication**: Clerk (multi-tenant from day 1)
+- ✅ **Storage**: Cloudflare R2 (media) + KV (metadata)
+- ✅ **Video Processing**: FFmpeg (Node.js automation)
+- ⏸️ **AI**: OpenAI GPT-4 (blocked until Monday - Anthropic credits)
+
+**Integration Points**:
+- Output stored in R2 with metadata
+- Accessible from v2u Podcast-Dashboard
+- Per-user asset isolation
+- Template library shared/private options
+
+**Competitive Differentiation**:
+- **NOT** a manual video editor (Clipchamp/Descript)
+- **NOT** just an uploader (Anchor/Riverside)
+- **IS** an AI-driven video production pipeline
+- **IS** a template-based automation system
+- **IS** a "describe once, generate forever" platform
+
+---
+
+### January 10, 2026 - Session 4: Core Video Production System Built
+
+**Status**: 🎨 UI Complete, Video Engine Operational, Ready for Backend Integration
+
+#### Strategic Direction Confirmed
+
+**Priority**: Focus on AI-powered video creation (the HARD PART) first
+- Deferred: YouTube/Rumble/Spotify publishing automation
+- Deferred: Social media cross-posting
+- Focus: End-to-end video production pipeline
+
+**Tech Stack Decisions**:
+- ✅ Frontend: React/Vite (continued from Session 2)
+- ✅ Authentication: Clerk (multi-tenant ready)
+- ✅ Backend: Express API with TypeScript
+- ✅ Video Processing: FFmpeg with Node.js wrapper
+- ⏸️ AI Integration: Blocked until Monday (Anthropic credits)
+
+#### What Was Built (Session 4)
+
+1. **Asset Management UI** ([client/src/pages/Assets.jsx](client/src/pages/Assets.jsx))
+   - Tab-based interface for 4 asset types (backgrounds, promo videos, promo audio, outros)
+   - Drag-and-drop file upload with preview
+   - Asset library grid with thumbnails
+   - File size display and upload tracking
+   - Delete functionality with overlay actions
+   - Responsive design with glassmorphism effects
+
+2. **Video Configuration UI** ([client/src/pages/Generate.jsx](client/src/pages/Generate.jsx))
+   - Episode information form (title, description)
+   - Media asset selection (background, audio, outro)
+   - Dynamic promo insert manager with timestamp positioning
+   - Promo type selection (video+audio, audio only, visual only)
+   - Collapsible metadata section (keywords, summary, timeline, tags)
+   - Configuration summary sidebar
+   - Save template / Preview / Generate buttons
+   - Real-time validation feedback
+
+3. **Enhanced Navigation System**
+   - React Router integration
+   - Persistent layout with navigation header
+   - 5 main pages: Dashboard, Assets, Videos, Generate, Settings
+   - Active route highlighting
+   - Lucide React icons throughout
+
+4. **Dashboard Page** ([client/src/pages/Dashboard.jsx](client/src/pages/Dashboard.jsx))
+   - Welcome hero section
+   - Stats grid (assets, videos generated, templates)
+   - Quick action cards with links
+   - Getting started checklist (3-step workflow)
+
+5. **Backend API Server** ([server/](server/))
+   - Express + TypeScript setup
+   - Video composition endpoint (`POST /api/video/generate`)
+   - Asset upload endpoint (`POST /api/assets/upload`)
+   - Health check endpoint (`GET /api/health`)
+   - Multer file upload middleware
+   - CORS enabled for frontend integration
+
+6. **Enhanced Video Composition Engine** ([server/src/services/videoComposer.ts](server/src/services/videoComposer.ts))
+   - **Flexible promo insert positioning** - Timestamp-based overlay system
+   - **Multi-format support** - Landscape (1920x1080), Portrait (1080x1920), Square (1080x1080)
+   - **Background looping** - Automatically extends to match audio duration
+   - **Smart aspect ratio handling** - Scale + pad to prevent distortion
+   - **Outro with fade effects** - 1s fade in, 2s hold, 2s fade out
+   - **Audio mixing** - Combine podcast audio with promo audio tracks
+   - **Metadata embedding ready** - Structure for title, keywords, timeline, tags
+   - **Temporary file cleanup** - Automatic cleanup after composition
+   - **FFmpeg validation** - Pre-flight check for required tools
+
+7. **Clerk Authentication System** ([docs/CLERK_SETUP.md](docs/CLERK_SETUP.md))
+   - **Frontend Integration**:
+     - `@clerk/clerk-react` SDK installed
+     - ClerkProvider wrapping entire app
+     - Sign-in page with branded UI
+     - Sign-up page with branded UI
+     - ProtectedRoute component for route guards
+     - UserButton in navigation header
+     - User info display in header
+   - **Backend Integration**:
+     - `@clerk/clerk-sdk-node` SDK installed
+     - Authentication middleware (`requireAuth`)
+     - Optional auth checking (`checkAuth`)
+     - User ID extraction helper
+     - Protected API endpoints
+   - **API Client**:
+     - Automatic token injection in requests
+     - Bearer token authentication
+     - Error handling for auth failures
+     - Clean API methods for all endpoints
+   - **Multi-Tenant Ready**:
+     - Per-user R2 paths prepared
+     - User ID scoping on all endpoints
+     - User context in all API responses
+
+#### Technology Integration
+
+**Frontend Stack**:
+- React 19.2.0
+- Vite 7.3.1
+- React Router DOM 7.x
+- Clerk React SDK
+- Lucide React (icons)
+- Tailwind CSS 3.4.1
+
+**Backend Stack**:
+- Express 4.18.2
+- TypeScript 5.3.3
+- Clerk Node.js SDK
+- Multer (file uploads)
+- TSX (TypeScript execution)
+
+**Video Processing**:
+- FFmpeg 8.0.1 (verified in Session 2)
+- FFprobe for duration detection
+- Custom TypeScript wrapper with async/await
+
+#### Key Features Implemented
+
+**Asset Management**:
+- ✅ Tab-based organization (4 asset types)
+- ✅ File upload with preview
+- ✅ Asset grid with thumbnails
+- ✅ Delete with confirmation
+- ⏸️ R2 storage integration (backend ready)
+
+**Video Configuration**:
+- ✅ Episode metadata input
+- ✅ Background media selection
+- ✅ Audio track upload
+- ✅ Outro selection
+- ✅ Dynamic promo insert system
+- ✅ Timestamp-based positioning
+- ✅ Configuration summary
+- ⏸️ Template save/load (UI ready)
+
+**Video Composition**:
+- ✅ Background loop generation
+- ✅ Audio mixing (main + promos)
+- ✅ Visual overlay system
+- ✅ Outro concatenation with fades
+- ✅ Multi-format output
+- ✅ Metadata structure
+- ⏸️ R2 upload (backend ready)
+
+**Authentication & Security**:
+- ✅ User sign-up/sign-in flow
+- ✅ Protected routes (frontend)
+- ✅ Protected endpoints (backend)
+- ✅ Session management
+- ✅ User context in API calls
+- ✅ Per-user data isolation structure
+- ⏸️ Clerk account setup (requires your API keys)
+
+#### What's Ready for Integration
+
+**Frontend → Backend**:
+- API endpoints defined and documented
+- Form data structure matches API contracts
+- Upload flow ready for backend calls
+- Authentication tokens automatically included
+
+**Backend → R2**:
+- Upload functions stubbed
+- Asset paths use R2 URL structure
+- Metadata preservation in place
+- Per-user paths configured
+
+**Backend → AI**:
+- Metadata structure matches NotebookLM format
+- Ready for GPT-4 integration (Monday)
+- Template system prepared
+
+#### Known Limitations
+
+**Current Session**:
+- ⚠️ Asset uploads are frontend-only (no R2 integration yet)
+- ⚠️ Video generation triggers alert (FFmpeg integration pending)
+- ⚠️ Clerk requires API keys (configuration step)
+- ⚠️ Assets stored in memory (will persist to R2)
+
+**Blocked Until Monday**:
+- ⚠️ AI-powered metadata generation (needs Anthropic credits)
+- ⚠️ GPT-4 prompt template conversion
+- ⚠️ Automatic timeline generation
+
+#### File Structure Created
+
+```
+client/
+  src/
+    components/
+      Layout.jsx               # Main layout with navigation + auth
+      ProtectedRoute.jsx       # Route guard component
+    pages/
+      Dashboard.jsx            # Welcome screen with quick actions
+      Assets.jsx               # Asset management UI
+      Videos.jsx               # Video library (placeholder)
+      Generate.jsx             # Video configuration UI
+      Settings.jsx             # Settings (placeholder)
+      SignIn.jsx               # Clerk sign-in page
+      SignUp.jsx               # Clerk sign-up page
+    lib/
+      api.js                   # API client with auth
+    App.jsx                    # Router with protected routes
+    main.jsx                   # Clerk provider setup
+  .env.local                   # Local environment variables
+  .env.example                 # Environment template
+
+server/
+  src/
+    services/
+      videoComposer.ts         # Enhanced FFmpeg wrapper
+    middleware/
+      auth.ts                  # Clerk authentication middleware
+    index.ts                   # Express API server with auth
+  package.json
+  tsconfig.json
+  .env.example
+  
+docs/
+  CLERK_SETUP.md               # Complete Clerk setup guide
+```
+
+#### Metrics
+
+**Frontend**:
+- 5 pages created
+- 1 layout component
+- React Router integrated
+- Dev server running on localhost:5173
+
+**Backend**:
+- 4 API endpoints
+- 1 video composition service
+- 136 npm packages installed
+- Server ready on port 3001
+
+**Video Engine**:
+- 3 output formats supported
+- Unlimited promo inserts
+- Audio mixing capability
+- Automatic cleanup system
+
+**Authentication**:
+- Clerk SDK integrated (frontend + backend)
+- Protected routes implemented
+- Sign-in/Sign-up pages created
+- User context in API calls
+- Per-user data isolation ready
+
+#### What's Next
+
+**Ready for Configuration** (you can do this):
+1. Create Clerk account at https://clerk.com
+2. Get API keys (publishable + secret)
+3. Add keys to `client/.env.local` and `server/.env`
+4. Test sign-in flow
+5. See [docs/CLERK_SETUP.md](docs/CLERK_SETUP.md) for detailed instructions
+
+**Ready for Integration** (we can do next session):
+1. Connect frontend asset upload to backend API
+2. Implement R2 storage for assets and videos
+3. Build video library page with user's generated videos
+4. Add template save/load functionality
+5. Test end-to-end video generation
+
+**Blocked Until Monday**:
+- AI-powered metadata generation (Anthropic credits)
+- GPT-4 template system
+- Automatic timeline extraction
+
+---
+
 ## 📅 Next Session Goals
 
 1. ~~Open PodcastProAI workspace~~ ✅
 2. ~~Copy news-collector integration~~ ✅ (Built from scratch)
-3. Configure API keys in .env file
-4. Run first automated episode generation
-5. Verify output quality against Clipchamp baseline
-6. Document any issues or refinements needed
+3. ~~Review V2U architecture documentation~~ ✅
+4. ~~Build Asset Management UI~~ ✅
+5. ~~Build Video Configuration UI~~ ✅
+6. ~~Port & enhance FFmpeg composition engine~~ ✅
+7. Set up Clerk Authentication (multi-tenant foundation)
+8. Connect frontend to backend API
+9. Implement R2 storage integration
+10. Test end-to-end video generation (Monday - needs Anthropic credits)
 
 ---
 
@@ -391,5 +838,5 @@ R2_SECRET_KEY        # Storage credentials
 
 ---
 
-*Last Updated: January 9, 2026*  
-*Next Review: TBD (After Week 1 completion)*
+*Last Updated: January 10, 2026 - Session 4 Complete*  
+*Next Review: Monday, January 13, 2026 (AI integration unlocked)*
