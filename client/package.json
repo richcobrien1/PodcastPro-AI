@@ -7,7 +7,10 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "cf:build": "vite build",
+    "cf:deploy:pages": "wrangler pages deploy dist --project <YOUR_PAGES_PROJECT>",
+    "cf:preview": "wrangler pages dev dist --port 5173"
   },
   "dependencies": {
     "@clerk/clerk-react": "^5.59.3",

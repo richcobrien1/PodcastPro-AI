@@ -1,0 +1,9 @@
+name = "podcastpro-ai-client-pages-sample"
+compatibility_date = "2026-01-01"
+
+[site]
+bucket = "dist"
+entry-point = "./"
+
+[vars]
+# VITE_API_URL = "https://api.example.com"
