@@ -93,6 +93,17 @@ This niche serves as our **automation proving ground** before scaling to higher-
    - Deep bass drones, sub-frequency rumbles (20-60Hz)
    - Binaural tones for immersion
    - Sora prompt: "Photorealistic black hole with glowing orange accretion disk, gravitational lensing warping starfield, slow approach, cinematic 4K, Interstellar movie style"
+6. **"Asteroid Belt - Drifting Through the Void"**
+   - POV floating through dense asteroid field
+   - Tumbling rocks, distant sun glints, depth of field
+   - Soft metallic impacts, resonant space ambience
+   - Sora prompt: "POV slow drift through asteroid belt, photorealistic tumbling rocks, sun rays through debris, cinematic depth of field, 4K space documentary"
+7. **"Galaxy Collision - Cosmic Dance"**
+   - Two galaxies merging in slow motion (Andromeda/Milky Way style)
+   - Billions of stars swirling, gravitational tidal forces
+   - Deep orchestral drones, swelling ambient waves
+   - Timelapse perspective spanning millions of years
+   - Sora prompt: "Two spiral galaxies colliding in slow motion, stars streaming between them, gravitational tidal tails, cosmic dust clouds, photorealistic 4K, Hubble telescope style"
 
 ---
 
