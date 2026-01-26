@@ -115,14 +115,50 @@ This niche serves as our **automation proving ground** before scaling to higher-
 
 ## Effort/Cost
 - **Effort**: Low (once pipeline is built)
-- **Cost**: Low (Sora/Suno subscriptions)
+- **Cost**: Low (~$25-50 for tools + subscriptions)
+
+## 🛠️ Recommended Tools (NASA/Interstellar Realism)
+
+### Visual Generation
+
+| Tool | Best For | Cost | Notes |
+|------|----------|------|-------|
+| **Space Engine** 🏆 | Black holes, galaxies, flythroughs | $25 (Pro) | Uses real NASA/ESA data, built-in gravitational lensing, record 4K directly |
+| **Universe Sandbox** | Galaxy collisions, asteroid physics | ~$30 | Physics-accurate gravity simulations |
+| **Sora** | Quick iterations, nature scenes | Subscription | Add "NASA imagery, Hubble telescope, photorealistic, no artistic interpretation" to prompts |
+| **Blender + Physical Starlight** | Ultimate control, custom scenes | Free | Steep learning curve but cinema-quality |
+
+### Audio Generation
+
+| Tool | Best For | Cost |
+|------|----------|------|
+| **Suno/Udio** | Ambient soundscapes, drones | Subscription |
+| **ElevenLabs** | Soft narration | Subscription |
+| **Freesound.org** | Real space sounds (NASA recordings) | Free |
+
+### 🎬 Recommended Workflow
+
+```
+1. Space Engine     → Record 4K cinematic sequences (10-15 min)
+2. Suno/Udio        → Generate matching ambient audio  
+3. DaVinci/Premiere → Color grade, assemble sequences
+4. FFmpeg           → Loop/crossfade to 2-4+ hours
+5. Export           → 4K for YouTube, optimize for watch time
+```
+
+### Space Engine Tips
+- Download: [spaceengine.org](https://spaceengine.org)
+- Pro license required for commercial/YouTube use ($25)
+- Built-in flight recorder for smooth camera paths
+- Real black hole physics (consulted astrophysicists)
+- Can export image sequences or direct video
 
 ## Production Notes
 - Slow, calm narration essential
 - Looping/ambient visuals
 - Longer content = more watch time
 - Background music important
-- ~~Can repurpose public domain footage~~ → Generate unique with Sora
+- ~~Can repurpose public domain footage~~ → Generate unique with Space Engine/Sora
 - **Target: 2-4+ hour videos for maximum watch time**
 
 ## Revenue Model
