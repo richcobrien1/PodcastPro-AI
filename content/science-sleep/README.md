@@ -87,6 +87,12 @@ This niche serves as our **automation proving ground** before scaling to higher-
 2. "Northern Lights Meditation - Relaxing Aurora Footage" (Sora aurora loops + nature sounds)
 3. "Deep Space Facts While You Sleep" (Soft narration + space visuals)
 4. "Ocean Depths - Bioluminescent Journey" (Sora underwater + ambient)
+5. **"Black Hole - Event Horizon" (PRIORITY)**
+   - Ultra-realistic black hole visualization (Interstellar-style gravitational lensing)
+   - Accretion disk glow, light bending, time dilation perspective
+   - Deep bass drones, sub-frequency rumbles (20-60Hz)
+   - Binaural tones for immersion
+   - Sora prompt: "Photorealistic black hole with glowing orange accretion disk, gravitational lensing warping starfield, slow approach, cinematic 4K, Interstellar movie style"
 
 ---
 
