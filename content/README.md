@@ -14,7 +14,7 @@ This folder contains podcast content planning and episode ideas organized by nic
 | [economics-documentaries/](economics-documentaries/) | Economic Documentaries | $7–12 | 📋 Planned |
 | [psychology-behavior/](psychology-behavior/) | Psychology & Behavior | $6–12 | 📋 Planned |
 | [history-documentaries/](history-documentaries/) | History Documentaries | $5–10 | 📋 Planned |
-| [drama-commentary/](drama-commentary/) | Drama/Commentary | $4–8 | 📋 Planned |
+| [drama-commentary/](drama-commentary/) | Drama/Commentary | $4–8 | ✅ Active |
 | [science-sleep/](science-sleep/) | Science/Sleep Learning | $3–7 | 📋 Planned |
 
 ---

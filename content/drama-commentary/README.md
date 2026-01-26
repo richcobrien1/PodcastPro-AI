@@ -2,7 +2,7 @@
 
 **Niche**: Drama/Commentary  
 **RPM Range**: $4–8  
-**Status**: 📋 Planned
+**Status**: ✅ Active (AI Deep Dive with Alex & Jessica - Daily News Updates)
 
 ---
 
