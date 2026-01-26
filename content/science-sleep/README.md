@@ -2,7 +2,7 @@
 
 **Niche**: Science/Space/Sleep Content  
 **RPM Range**: $3–7  
-**Status**: 📋 Planned
+**Status**: � In Development (AI Automation Pipeline)
 
 ---
 
@@ -15,6 +15,43 @@ Videos designed for watch time rather than active excitement, often featuring sl
 - Extremely high watch time (people fall asleep to it!)
 - Low production effort
 - Example: A channel gained 188,000 subscribers in five months
+- **Perfect for AI automation testing** - Simple format, low risk
+
+---
+
+## 🤖 AI Automation Strategy
+
+This niche serves as our **automation proving ground** before scaling to higher-RPM content.
+
+### Production Pipeline
+
+| Step | Tool | Output |
+|------|------|--------|
+| 1. Visuals | **Sora** | Slow cinematic loops (space, nature, abstract) |
+| 2. Music | **Suno/Udio** | Ambient soundscapes, drone music |
+| 3. Narration (optional) | **ElevenLabs/OpenAI TTS** | Soft science facts for "sleep learning" |
+| 4. Assembly | **FFmpeg/Remotion** | Loop/extend to 2-8 hours |
+
+### Visual Themes (Sora Prompts)
+- Nebulas and galaxies slowly rotating
+- Northern lights over mountains
+- Deep ocean bioluminescence
+- Abstract particle flows
+- Slow forest/nature scenes
+- Earth from space orbit
+
+### Audio Themes
+- Space ambient (synth pads, distant tones)
+- Nature soundscapes (rain, ocean, forest)
+- Binaural beats + soft music
+- Minimal piano/strings
+
+### Content Formula
+1. **Generate 10-15 min of unique Sora visuals**
+2. **Create matching AI ambient soundtrack**
+3. **Optional: Add soft narration with science facts**
+4. **Loop/crossfade to extend to 2-4+ hours**
+5. **Variations**: Same visuals + different music = multiple videos
 
 ---
 
@@ -46,22 +83,32 @@ Videos designed for watch time rather than active excitement, often featuring sl
 
 <!-- Add episode ideas below -->
 
-1. 
+1. "Journey Through the Cosmos - 4 Hour Sleep Ambient" (Sora space visuals + AI ambient music)
+2. "Northern Lights Meditation - Relaxing Aurora Footage" (Sora aurora loops + nature sounds)
+3. "Deep Space Facts While You Sleep" (Soft narration + space visuals)
+4. "Ocean Depths - Bioluminescent Journey" (Sora underwater + ambient)
 
 ---
 
 ## Key Value Drivers
-- Total watch time
+- Total watch time (2-8 hour videos!)
 - Low competition
 - Passive viewing (background content)
+- **Fully automatable with AI**
 
 ## Effort/Cost
-- **Effort**: Low
-- **Cost**: Low
+- **Effort**: Low (once pipeline is built)
+- **Cost**: Low (Sora/Suno subscriptions)
 
 ## Production Notes
 - Slow, calm narration essential
 - Looping/ambient visuals
 - Longer content = more watch time
 - Background music important
-- Can repurpose public domain footage
+- ~~Can repurpose public domain footage~~ → Generate unique with Sora
+- **Target: 2-4+ hour videos for maximum watch time**
+
+## Revenue Model
+- Lower RPM ($3-7) compensated by **massive watch hours**
+- A 4-hour video watched by 10K people = 40K watch hours
+- Algorithm heavily favors high-retention content
