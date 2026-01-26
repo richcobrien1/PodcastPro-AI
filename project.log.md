@@ -1010,5 +1010,87 @@ docs/
 
 ---
 
-*Last Updated: January 10, 2026 - Session 4 Complete*  
-*Next Review: Monday, January 13, 2026 (AI integration unlocked)*
+## 📅 January 26, 2026 - YouTube RPM Niche Analysis for Podcast Expansion
+
+### 🎯 Objective
+Research and document high-RPM YouTube niches to optimize podcast content strategy for better monetization.
+
+### 📊 YouTube Niche Analysis for Better RPM Results
+
+#### 1. YouTube Drama and Internet Commentary
+This niche focuses on creator scandals, platform chaos, and viral breakdowns.
+- **Performance Metrics**: $4–8 RPM
+- **Characteristics**: High growth speed; relies on catching viral moments
+- **Downside**: High stress and "perishable" content; the niche moves on if the creator takes a break
+- **Effort/Cost**: Medium effort, low cost
+
+#### 2. Relaxing Science, Space, and Sleep Learning
+Videos designed for watch time rather than active excitement, often featuring slow narration and looping visuals.
+- **Performance Metrics**: $3–7 RPM
+- **Characteristics**: High total watch time compensates for lower RPM. Minimal visuals are required
+- **Example**: A channel in this niche gained 188,000 subscribers in five months
+- **Effort/Cost**: Low effort, low cost
+
+#### 3. Evergreen History Documentaries
+Focuses on wars, empires, and political collapses using well-structured storytelling.
+- **Performance Metrics**: $5–10 RPM
+- **Characteristics**: High "bingeability." Viewers tend to watch multiple videos in one sitting, signaling the algorithm to push the content further
+- **Effort/Cost**: Medium effort, low cost
+
+#### 4. Psychology and Human Behavior
+Focuses on relatable human experiences (e.g., procrastination, self-sabotage, and validation).
+- **Performance Metrics**: $6–12 RPM
+- **Characteristics**: High retention due to "curiosity loops." Older, more intentional audiences lead to higher engagement
+- **Effort/Cost**: Medium effort, low cost
+
+#### 5. Faceless Economic Documentaries
+Story-driven explanations of markets, inflation, and global financial shifts.
+- **Performance Metrics**: $7–12 RPM (Can earn $7,000 to $22,000+ monthly)
+- **Characteristics**: Educated audience that advertisers value highly. Content is evergreen and pulls views for years
+- **Effort/Cost**: Medium to high effort, low cost
+
+#### 6. Luxury and Wealth
+Covers celebrity net worth, mansions, private jets, and expensive lifestyles.
+- **Performance Metrics**: $8–15 RPM
+- **Characteristics**: High "spending intent" from the audience. The production structure is repetitive and easy to scale (Who they are -> How they got rich -> What they own)
+- **Effort/Cost**: Low to medium effort, low cost
+
+#### 7. AI and Automation
+Focuses on software workflows, new AI tools, and productivity hacks.
+- **Performance Metrics**: $10–20+ RPM
+- **Characteristics**: Aggressively monetized by B2B and SaaS (Software as a Service) advertisers who bid heavily to reach business-minded viewers
+- **Effort/Cost**: Medium effort, low cost
+
+#### 8. Personal Finance
+The highest-earning niche, covering investing, credit cards, debt, and passive income.
+- **Performance Metrics**: $15–30+ RPM
+- **Characteristics**: Advertisers (banks, brokerages) pay a premium for this audience. Content is highly evergreen (e.g., "how credit cards work")
+- **Earnings Potential**: A video with a few hundred thousand views can out-earn a million-view video in other niches
+- **Effort/Cost**: Medium effort, low cost
+
+---
+
+### 📋 Comparative Niche Overview
+
+| Niche | RPM Range | Earning Potential | Effort Level | Key Value Driver |
+|-------|-----------|-------------------|--------------|------------------|
+| Drama/Commentary | $4 – $8 | Medium | Medium | Speed/Viral Topics |
+| Science/Sleep | $3 – $7 | Medium | Low | Total Watch Time |
+| History | $5 – $10 | Medium | Medium | Bingeability |
+| Psychology | $6 – $12 | High | Medium | Relatability/Curiosity |
+| Economics | $7 – $12 | Very High | Medium/High | Educated Audience |
+| Luxury | $8 – $15 | Very High | Low/Medium | Spending Intent |
+| AI/Automation | $10 – $20+ | Very High | Medium | High B2B Ad Bids |
+| Personal Finance | $15 – $30+ | Extremely High | Medium | Financial Intent/Evergreen |
+
+---
+
+### 🎯 Strategic Implications for PodcastPro-AI
+- **Current Focus (AI & Automation)**: Already in a high-RPM niche ($10-20+)
+- **Expansion Opportunities**: Personal Finance content could significantly boost revenue
+- **Content Strategy**: Focus on evergreen topics for long-term view accumulation
+
+---
+
+*Last Updated: January 26, 2026 - YouTube RPM Analysis Added*  
+*Next Review: TBD*
