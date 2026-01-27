@@ -1,0 +1,53 @@
+// ============================================
+// Black Hole - Event Horizon Approach
+// Template for Space Engine AI Interface
+// ============================================
+// 
+// Creates an Interstellar-style black hole visualization with:
+// - Gravitational lensing effect
+// - Glowing accretion disk  
+// - Slow dramatic approach
+//
+// Customize: distance, end_distance, duration
+// ============================================
+
+// Navigate to Sagittarius A* (Milky Way's supermassive black hole)
+// Mass: ~4 million solar masses
+Select "Milky Way/Sagittarius A*"
+Goto { Target "Milky Way/Sagittarius A*" }
+
+// Initial camera position - safe viewing distance
+// 100 billion km = shows full accretion disk
+GotoPos { Dist 100e9 }
+
+// Camera settings for cinematic view
+SetFOV 45
+SetExposure 1.2
+SetBloom 0.3
+SetHDR true
+
+// Ensure black hole rendering is enabled
+// (Space Engine has realistic gravitational lensing built-in)
+
+// Create slow approach flight path
+// Total duration: 600 seconds (10 minutes)
+StartFlightPath
+AddWaypoint { Time 0 Dist 100e9 }      // Start: 100 billion km
+AddWaypoint { Time 150 Dist 75e9 }     // 2.5 min: 75 billion km
+AddWaypoint { Time 300 Dist 50e9 }     // 5 min: 50 billion km  
+AddWaypoint { Time 450 Dist 25e9 }     // 7.5 min: 25 billion km
+AddWaypoint { Time 600 Dist 10e9 }     // 10 min: 10 billion km (event horizon visible)
+PlayFlightPath
+
+// Recording settings
+// 4K resolution, 30fps, 10 minute duration
+StartRecording { Width 3840 Height 2160 FPS 30 Duration 600 }
+
+// ============================================
+// Audio recommendations:
+// - Deep bass drones (20-60Hz)
+// - Sub-frequency rumbles
+// - Binaural tones
+// - Suggested: Suno prompt "deep space ambient, black hole, 
+//   low frequency drone, ominous, cinematic, 10 minutes"
+// ============================================

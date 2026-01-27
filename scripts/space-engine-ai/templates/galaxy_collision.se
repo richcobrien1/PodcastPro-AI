@@ -1,0 +1,61 @@
+// ============================================
+// Galaxy Collision - Cosmic Dance
+// Template for Space Engine AI Interface
+// ============================================
+//
+// Two spiral galaxies merging in slow motion:
+// - Milky Way + Andromeda style collision
+// - Billions of stars streaming between galaxies
+// - Gravitational tidal tails
+//
+// Note: Uses time acceleration to show millions of years
+// Customize: viewing angle, time rate, duration
+// ============================================
+
+// Navigate to Andromeda Galaxy
+// (In ~4.5 billion years, Andromeda will collide with Milky Way)
+Select "Andromeda"
+Goto { Target "Andromeda" }
+
+// Position camera for wide view of both galaxies
+// 2.5 million light years gives panoramic view
+GotoPos { Dist 2.5e6 }
+
+// Camera settings for galaxy viewing
+SetFOV 90                    // Very wide for both galaxies
+SetExposure 1.5              // Brighter for distant galaxies
+SetBloom 0.4
+SetHDR true
+
+// Set time to show collision happening
+// In reality: Andromeda approaching at 110 km/s
+// We accelerate time massively to show the collision
+
+// Time rate: 1e13 = ~300,000 years per second
+// Over 10 minutes = ~180 million years of evolution
+SetTimeRate 1e13
+
+// Orbit camera around the collision
+// Slowly rotating viewpoint
+StartFlightPath
+AddWaypoint { Time 0 Rot (0, 0, 0, 1) }
+AddWaypoint { Time 200 Rot (0, 0.383, 0, 0.924) }      // 45° rotation
+AddWaypoint { Time 400 Rot (0, 0.707, 0, 0.707) }      // 90° rotation
+AddWaypoint { Time 600 Rot (0, 0.924, 0, 0.383) }      // 135° rotation
+PlayFlightPath
+
+// Recording settings
+// 4K resolution, 30fps, 10 minute duration
+StartRecording { Width 3840 Height 2160 FPS 30 Duration 600 }
+
+// Reset time rate after recording
+// SetTimeRate 1
+
+// ============================================
+// Audio recommendations:
+// - Deep orchestral drones
+// - Swelling ambient waves
+// - Majestic, cosmic scale feeling
+// - Suggested: Suno prompt "epic space ambient, galaxy,
+//   orchestral drone, majestic, cosmic, slow build, 10 minutes"
+// ============================================

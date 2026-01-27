@@ -1,0 +1,54 @@
+// ============================================
+// Asteroid Belt - Drifting Through the Void
+// Template for Space Engine AI Interface
+// ============================================
+//
+// POV drift through the main asteroid belt with:
+// - Tumbling rocks in foreground
+// - Distant sun glints
+// - Depth of field effects
+//
+// Customize: starting position, drift speed, duration
+// ============================================
+
+// Navigate to the Sun first (asteroid belt orbits the Sun)
+Select "Milky Way/Sun"
+Goto { Target "Milky Way/Sun" }
+
+// Position camera in the main asteroid belt
+// 2.5 AU from Sun = 375 million km (middle of belt)
+// Belt extends roughly 2.2 - 3.2 AU
+GotoPos { Dist 375e6 }
+
+// Camera settings
+SetFOV 60                    // Wider FOV for immersion
+SetExposure 1.0
+SetBloom 0.2
+SetHDR true
+
+// Enable asteroid rendering
+// Space Engine procedurally generates asteroids
+
+// Slow drift through the belt
+// Simulating slow spacecraft movement
+StartFlightPath
+// Gentle S-curve path through debris
+AddWaypoint { Time 0 Pos (375e6, 0, 0) }
+AddWaypoint { Time 150 Pos (376e6, 2e6, 1e6) }
+AddWaypoint { Time 300 Pos (377e6, 0, 3e6) }
+AddWaypoint { Time 450 Pos (379e6, -2e6, 2e6) }
+AddWaypoint { Time 600 Pos (380e6, 0, 0) }
+PlayFlightPath
+
+// Recording settings
+// 4K resolution, 30fps, 10 minute duration
+StartRecording { Width 3840 Height 2160 FPS 30 Duration 600 }
+
+// ============================================
+// Audio recommendations:
+// - Soft metallic impacts/pings
+// - Resonant space ambience
+// - Occasional deep rumbles
+// - Suggested: Suno prompt "space ambient, asteroid field,
+//   subtle metallic sounds, peaceful, drifting, 10 minutes"
+// ============================================
