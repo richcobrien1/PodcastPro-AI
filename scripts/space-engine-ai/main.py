@@ -35,16 +35,27 @@ def cli():
 @click.option('--prompt', '-p', type=str, help='Natural language description')
 @click.option('--duration', '-d', type=int, default=600, help='Video duration in seconds (default: 600)')
 @click.option('--output', '-o', type=str, help='Output filename')
-@click.option('--resolution', '-r', type=str, default='3840x2160', help='Video resolution (default: 4K)')
+@click.option('--resolution', '-r', type=click.Choice(['1080p', '1440p', '4k', '5k', '8k']), 
+              default='4k', help='Video resolution preset (default: 4k)')
 @click.option('--preview', is_flag=True, help='Preview settings without rendering')
 def generate(template, prompt, duration, output, resolution, preview):
     """Generate a space video from template or prompt"""
+    
+    from config import RESOLUTION_PRESETS, VRAM_REQUIREMENTS
     
     console.print(Panel.fit("🚀 Space Engine AI Interface", style="bold blue"))
     
     if not template and not prompt:
         console.print("[red]Error: Must specify --template or --prompt[/red]")
         return
+    
+    # Get resolution dimensions
+    width, height = RESOLUTION_PRESETS.get(resolution, (3840, 2160))
+    resolution_str = f"{width}x{height}"
+    vram_needed = VRAM_REQUIREMENTS.get(resolution, '8GB')
+    
+    if resolution in ['8k', '5k']:
+        console.print(f"[yellow]⚠️  {resolution.upper()} requires {vram_needed} VRAM. Render will be slow.[/yellow]")
     
     # Initialize components
     composer = AIComposer()
@@ -67,14 +78,15 @@ def generate(template, prompt, duration, output, resolution, preview):
     
     # Set output filename
     if not output:
-        output = f"{template or 'custom'}_{duration}s.mp4"
+        output = f"{template or 'custom'}_{resolution}_{duration}s.mp4"
     output_path = OUTPUT_DIR / output
     
     # Show preview
     console.print("\n[bold]Scene Configuration:[/bold]")
     console.print(f"  Script: {script_path}")
     console.print(f"  Duration: {duration}s ({duration // 60} min)")
-    console.print(f"  Resolution: {resolution}")
+    console.print(f"  Resolution: {resolution.upper()} ({resolution_str})")
+    console.print(f"  VRAM Required: {vram_needed}")
     console.print(f"  Output: {output_path}")
     
     if preview:

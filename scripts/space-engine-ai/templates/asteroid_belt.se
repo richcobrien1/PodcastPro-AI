@@ -41,7 +41,16 @@ AddWaypoint { Time 600 Pos (380e6, 0, 0) }
 PlayFlightPath
 
 // Recording settings
-// 4K resolution, 30fps, 10 minute duration
+// Resolution options: 1080p, 1440p, 4K, 5K, 8K
+// Default: 4K (3840x2160) - best balance of quality and render time
+// 8K (7680x4320) - requires 12GB+ VRAM, longer render
+// 
+// CONFIGURABLE: Change Width/Height for different resolutions
+// 1080p: Width 1920 Height 1080
+// 1440p: Width 2560 Height 1440  
+// 4K:    Width 3840 Height 2160 (recommended)
+// 5K:    Width 5120 Height 2880
+// 8K:    Width 7680 Height 4320
 StartRecording { Width 3840 Height 2160 FPS 30 Duration 600 }
 
 // ============================================
