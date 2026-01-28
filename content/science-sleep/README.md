@@ -115,7 +115,7 @@ This niche serves as our **automation proving ground** before scaling to higher-
 
 ## Effort/Cost
 - **Effort**: Low (once pipeline is built)
-- **Cost**: Low (~$25-50 for tools + subscriptions)
+- **Cost**: Low (~$70-100 for tools + subscriptions)
 
 ## 🛠️ Recommended Tools (NASA/Interstellar Realism)
 
@@ -123,10 +123,12 @@ This niche serves as our **automation proving ground** before scaling to higher-
 
 | Tool | Best For | Cost | Notes |
 |------|----------|------|-------|
-| **Space Engine** 🏆 | Black holes, galaxies, flythroughs | $25 (Pro) | Uses real NASA/ESA data, built-in gravitational lensing, record 4K directly |
+| **Space Engine** 🏆 | Black holes, galaxies, flythroughs | $29.95 Standard / $69.95 Pro | Uses real NASA/ESA data, built-in gravitational lensing, record 4K directly |
 | **Universe Sandbox** | Galaxy collisions, asteroid physics | ~$30 | Physics-accurate gravity simulations |
 | **Sora** | Quick iterations, nature scenes | Subscription | Add "NASA imagery, Hubble telescope, photorealistic, no artistic interpretation" to prompts |
 | **Blender + Physical Starlight** | Ultimate control, custom scenes | Free | Steep learning curve but cinema-quality |
+
+> ⚠️ **Space Engine Pro ($69.95) required** for YouTube monetization and commercial use
 
 ### Audio Generation
 
@@ -148,7 +150,8 @@ This niche serves as our **automation proving ground** before scaling to higher-
 
 ### Space Engine Tips
 - Download: [spaceengine.org](https://spaceengine.org)
-- Pro license required for commercial/YouTube use ($25)
+- **Standard ($29.95)** - Personal use only
+- **Pro ($69.95)** - Commercial/YouTube use ✓
 - Built-in flight recorder for smooth camera paths
 - Real black hole physics (consulted astrophysicists)
 - Can export image sequences or direct video

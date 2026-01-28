@@ -33,9 +33,13 @@ space-engine-ai/
 ## 🚀 Quick Start
 
 ### Prerequisites
-1. **Space Engine Pro** ($25) - [spaceengine.org](https://spaceengine.org)
+1. **Space Engine** - [spaceengine.org](https://spaceengine.org)
+   - **Standard** ($29.95) - Personal use only
+   - **Pro** ($69.95) - Commercial/YouTube use ✓
 2. **Python 3.10+**
 3. **FFmpeg** in PATH
+
+> ⚠️ **Pro license required** for YouTube monetization and commercial use
 
 ### Installation
 ```bash
