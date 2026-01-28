@@ -1,0 +1,48 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Environment files (NEVER commit secrets)
+.env
+.env.local
+.env.*.local
+scripts/.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.venv/
+venv/
+
+# Build outputs
+dist/
+build/
+*.tsbuildinfo
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temp files
+scripts/temp/
+*.tmp
+*.log
+
+# Audio/Video temp files (large)
+*.wav
+*.mp3
+*.mp4
+!assets/**/*.mp4
+
+# Space Engine output
+scripts/space-engine-ai/output/

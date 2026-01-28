@@ -4,6 +4,7 @@
   "description": "Automated episode generation for v2u.us",
   "scripts": {
     "generate-episode": "ts-node generate-episode.ts",
+    "generate-gemini": "ts-node generate-episode-gemini.ts",
     "test-pipeline": "ts-node generate-episode.ts --test"
   },
   "dependencies": {
