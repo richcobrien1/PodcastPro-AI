@@ -11,8 +11,8 @@ import struct
 import base64
 from pathlib import Path
 
-# Your API key
-GEMINI_API_KEY = "AIzaSyBiQTPQBlDVnAHie2saLGiQQ5t-0Uo0-XI"
+# API key from environment variable
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
 
 def test_gemini_tts():
     """Test the Gemini TTS API with a simple multi-speaker prompt."""
