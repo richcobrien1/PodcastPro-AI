@@ -155,6 +155,7 @@ This niche serves as our **automation proving ground** before scaling to higher-
 - Built-in flight recorder for smooth camera paths
 - Real black hole physics (consulted astrophysicists)
 - Can export image sequences or direct video
+- **Reference Video**: [4K Space Engine Example](https://youtu.be/mNcM7Sl0_CY) - Quality benchmark
 
 ## Production Notes
 - Slow, calm narration essential
